@@ -1,0 +1,11 @@
+apiVersion: s3.aws.crossplane.io/v1beta1
+kind: Bucket
+metadata:
+  name: hello-crossplane-rmadamanchi
+spec:
+  forProvider:
+    acl: private
+    locationConstraint: us-east-2
+    objectLockEnabledForBucket: false
+  providerConfigRef:
+    name: providerconfig-aws
